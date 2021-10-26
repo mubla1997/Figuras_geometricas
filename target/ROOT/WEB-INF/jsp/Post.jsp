@@ -100,12 +100,12 @@
              var size = ${size};
              var sides = 5;
              var penta = 2 * Math.PI / sides; /* Valor precalculado del la funcion pentagono */
-             var fijar = (Math.PI / 180.0) * -18; /* Fijamos el pentagono */
+             var fix = (Math.PI / 180.0) * -18; /* Fijamos el pentagono */
 
              ctx.beginPath();
 
             for (var i = 1; i <= sides;i += 1) {
-            var cursor = i * penta + fijar;
+            var cursor = i * penta + fix;
               ctx.lineTo (x + size * Math.cos(cursor), y + size * Math.sin(cursor));
             }
             ctx.closePath();

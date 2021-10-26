@@ -22,6 +22,7 @@ public class LoginController extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
+        req.setAttribute("message","username or password incorrect");
         RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/LoginOk.jsp");
         dispatcher.forward(req,resp);
     }
