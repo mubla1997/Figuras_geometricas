@@ -20,7 +20,6 @@ public class AuthFilter extends HttpFilter {
         if (session.getAttribute("auth") != null){
             req.setAttribute("username",session.getAttribute("username"));
             chain.doFilter(req,resp);
-
             return;
         }
         resp.sendError(401,"Acceso no autorizado");
