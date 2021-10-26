@@ -56,7 +56,7 @@
 </tr>
 
 </table>
-<button type="submit">Crear</button>
+<input type="submit" value="Create" />
 </form>
 
 <form action="${pageContext.request.contextPath}/logout" method="post">

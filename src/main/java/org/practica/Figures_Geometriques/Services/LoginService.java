@@ -10,10 +10,8 @@ public class LoginService {
     public boolean userOk(String username, String password){
         User user = userDAO.getUser(username);
         if (user == null) return false;
+        if (user.getPassword().equals(password)) return true;
 
-        if (password.equals(user.getPassword()) && username.equals(user.getUsername())){
-            return true;
-        }
         return false;
     }
 }

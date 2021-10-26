@@ -2,6 +2,8 @@ package org.practica.Figures_Geometriques.DAOs;
 
 import org.practica.Figures_Geometriques.Models.Figure;
 
+import java.util.List;
+
 public class FigureDAOImpl implements FigureDAO {
     @Override
     public Figure getFigure(String name, String typeFigure, String color, int size, int coordenateX, int coordenateY) {
@@ -14,5 +16,10 @@ public class FigureDAOImpl implements FigureDAO {
         figure.setCoordenateX(coordenateX);
         figure.setCoordenateY(coordenateY);
         return figure;
+    }
+
+    @Override
+    public List <Figure> showFigures() {
+        return null;
     }
 }
