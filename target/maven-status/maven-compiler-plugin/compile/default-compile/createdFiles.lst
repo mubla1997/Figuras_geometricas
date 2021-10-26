@@ -2,6 +2,10 @@ org\practica\Figures_Geometriques\Services\LoginService.class
 org\practica\Figures_Geometriques\Filters\AuthFilter.class
 org\practica\Figures_Geometriques\DAOs\UserDAOImpl.class
 org\practica\Figures_Geometriques\Controllers\LoginController.class
+org\practica\Figures_Geometriques\DAOs\FigureDAOImpl.class
+org\practica\Figures_Geometriques\Models\Figure.class
 org\practica\Figures_Geometriques\Controllers\IndiceServlet.class
+org\practica\Figures_Geometriques\DAOs\FigureDAO.class
 org\practica\Figures_Geometriques\Models\User.class
+org\practica\Figures_Geometriques\Controllers\LogoutController.class
 org\practica\Figures_Geometriques\DAOs\UserDAO.class
