@@ -1,2 +1,6 @@
 org\practica\Figures_Geometriques\Controllers\LoginController.class
 org\practica\Figures_Geometriques\Controllers\IndiceServlet.class
+org\practica\Figures_Geometriques\Models\User.class
+org\practica\Figures_Geometriques\Services\LoginService.class
+org\practica\Figures_Geometriques\DAOs\UserDAO.class
+org\practica\Figures_Geometriques\DAOs\UserDAOImpl.class
