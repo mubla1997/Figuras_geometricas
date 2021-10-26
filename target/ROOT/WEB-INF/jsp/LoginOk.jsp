@@ -6,6 +6,8 @@
 <title>LoginOk</title>
 </head>
 <body>
-<a href="/indice"></a>
+<%
+    response.sendRedirect("/indice");
+%>
 </body>
 </html>
