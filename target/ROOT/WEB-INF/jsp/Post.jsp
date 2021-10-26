@@ -12,7 +12,17 @@
     <link rel="stylesheet" href="">
 </head>
 <body>
+
+<form action="${pageContext.request.contextPath}/logout" method="post">
+    <input type="submit" value="Logout" />
+</form>
+<form action="${pageContext.request.contextPath}/list" method="post">
+    <input type="submit" value="View List" />
+</form>
+
 <canvas id="myCanvas" width="1024" height="768"> </canvas>
+
+
 
     <script>
     var c = document.getElementById("myCanvas");
@@ -35,6 +45,7 @@
         createStar(ctx);
         break;
     }
+
 
 
 
