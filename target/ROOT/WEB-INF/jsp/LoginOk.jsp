@@ -3,7 +3,7 @@
 
 <html>
 <head>
-<title>Indice</title>
+<title>LoginOk</title>
 </head>
 <body>
 <a href="/indice"></a>

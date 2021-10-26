@@ -31,7 +31,7 @@ public class LoginController extends HttpServlet {
             session.setAttribute("auth",true);
             session.setAttribute("username",username);
 
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/loginok.jsp");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/LoginOk.jsp");
             dispatcher.forward(req,resp);
             return;
         }
