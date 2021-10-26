@@ -12,6 +12,7 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public User getUser(String username) {
+
         User user = new User();
         user.setUsername("pablo");
         user.setPassword("1234");

@@ -11,7 +11,7 @@ public class LoginService {
         User user = userDAO.getUser(username);
         if (user == null) return false;
 
-        if (password.equals(user.getPassword())){
+        if (password.equals(user.getPassword()) && username.equals((user.getUsername()){
             return true;
         }
         return false;
