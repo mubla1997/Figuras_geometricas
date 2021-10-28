@@ -6,6 +6,11 @@
 <title>Indice</title>
 </head>
 <body>
+
+<c:if test="${not empty 'message'}">
+<div> ${message}</div>
+</c:if>
+
 <h1> Indice </h1>
 <h2> Creacion de figuras geometricas <h2>
 
@@ -57,6 +62,10 @@
 
 </table>
 <input type="submit" value="Create" />
+</form>
+
+<form action="${pageContext.request.contextPath}/list" method="post">
+    <input type="submit" value="View List" />
 </form>
 
 <form action="${pageContext.request.contextPath}/logout" method="post">

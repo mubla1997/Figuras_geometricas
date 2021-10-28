@@ -7,10 +7,10 @@ import java.util.List;
 
 public class FigureDAOImpl implements FigureDAO {
 
-    List<Figure> listFigure = new ArrayList <>();
+    static List<Figure> listFigure = new ArrayList <>();
 
     @Override
-    public Figure getFigure(String name, String typeFigure, String color, int size, int coordenateX, int coordenateY) {
+    public Figure saveFigure(String name, String typeFigure, String color, int size, int coordenateX, int coordenateY) {
 
         Figure figure = new Figure();
         figure.setName(name);
@@ -20,6 +20,8 @@ public class FigureDAOImpl implements FigureDAO {
         figure.setCoordenateX(coordenateX);
         figure.setCoordenateY(coordenateY);
         listFigure.add(figure);
+        System.out.println("*************");
+        System.out.println(listFigure);
         return figure;
     }
 
