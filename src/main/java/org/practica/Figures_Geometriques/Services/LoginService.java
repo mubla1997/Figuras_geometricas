@@ -15,19 +15,19 @@ public class LoginService {
         User user = userDAO.getUser(username);
 
         if (username == null || password == null) return false;
-        if(user == null) return false;
+        if(user == null) {
+            return false;
+        }else return user.getPassword().equals(password);
 
-        if (password.equals(user.getPassword())) return true;
-        return false;
     }
 
     public boolean createUserOk(String username, String password) throws SQLException {
 
-        for(User us : userList){
-            if(us.getUsername().equals(username)){
-                return false;
+            for (User us : userList) {
+                if (us.getUsername().equals(username)) {
+                    return false;
+                }
             }
-        }
         User user = new User();
         user.setUsername(username);
         user.setPassword(password);

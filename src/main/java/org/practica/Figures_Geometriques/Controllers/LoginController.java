@@ -15,7 +15,7 @@ import java.io.Writer;
 @WebServlet(value = "/login")
 public class LoginController extends HttpServlet {
     LoginService loginService = new LoginService();
-    HttpSession session;
+
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -26,7 +26,6 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        session = req.getSession();
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 

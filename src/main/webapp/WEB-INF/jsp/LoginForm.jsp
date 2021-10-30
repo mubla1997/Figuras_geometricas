@@ -22,7 +22,7 @@
 </table>
 <button type="submit">Login</button>
 </form>
-<form action="${pageContext.request.contextPath}/register" method="post">
+<form action="${pageContext.request.contextPath}/register" method="get">
     <input type="submit" value="Register" />
 </form>
 

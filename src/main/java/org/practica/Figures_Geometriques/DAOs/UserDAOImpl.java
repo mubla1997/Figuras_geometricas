@@ -5,7 +5,6 @@ import org.practica.Figures_Geometriques.Models.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,10 +19,9 @@ public class UserDAOImpl implements UserDAO {
 
         try{
 
-            PreparedStatement preparedStatement = con.prepareStatement("Select * from usuari where username=?");
+            PreparedStatement preparedStatement = con.prepareStatement("Select * from usuari where username=?;");
             preparedStatement.setString(1,username);
             ResultSet rs = preparedStatement.executeQuery();
-            // Para devolver mas de un valor, cambiar if por while
 
             if(rs.next()){
                 String us = rs.getString(1);
@@ -48,7 +46,7 @@ public class UserDAOImpl implements UserDAO {
 
         try{
 
-            PreparedStatement preparedStatement = con.prepareStatement("Select * from usuari");
+            PreparedStatement preparedStatement = con.prepareStatement("Select * from usuari;");
             ResultSet rs = preparedStatement.executeQuery();
             List<User> listUsers = new ArrayList <>();
 
@@ -74,7 +72,7 @@ public class UserDAOImpl implements UserDAO {
         Connection con = db.getConnection();
 
         try {
-            PreparedStatement preparedStatement = con.prepareStatement("insert into usuari('username','passwd') values (?,?)");
+            PreparedStatement preparedStatement = con.prepareStatement("insert into usuari('username','passwd') values (?,?);");
             preparedStatement.setString(1, user.getUsername());
             preparedStatement.setString(2, user.getPassword());
             preparedStatement.execute();
