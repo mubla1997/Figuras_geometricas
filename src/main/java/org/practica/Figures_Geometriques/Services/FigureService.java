@@ -4,6 +4,7 @@ import org.practica.Figures_Geometriques.DAOs.FigureDAO;
 import org.practica.Figures_Geometriques.DAOs.FigureDAOImpl;
 import org.practica.Figures_Geometriques.Models.Figure;
 
+import java.util.Date;
 import java.util.List;
 
 public class FigureService {

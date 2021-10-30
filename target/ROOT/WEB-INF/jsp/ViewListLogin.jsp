@@ -16,6 +16,7 @@
    <c:forEach var = "figure" items="${list}">
        <p> Name: ${figure.name}</p>
        <p> Type: ${figure.typeFigure}</p>
+
        <form action="${pageContext.request.contextPath}/indice" method="post">
            <input type="submit" value="Visualizar" />
        </form>

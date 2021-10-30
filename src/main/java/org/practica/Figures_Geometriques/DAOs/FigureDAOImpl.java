@@ -3,6 +3,7 @@ package org.practica.Figures_Geometriques.DAOs;
 import org.practica.Figures_Geometriques.Models.Figure;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class FigureDAOImpl implements FigureDAO {
@@ -20,8 +21,6 @@ public class FigureDAOImpl implements FigureDAO {
         figure.setCoordenateX(coordenateX);
         figure.setCoordenateY(coordenateY);
         listFigure.add(figure);
-        System.out.println("*************");
-        System.out.println(listFigure);
         return figure;
     }
 

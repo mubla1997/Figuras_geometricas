@@ -37,6 +37,7 @@ public class IndiceServlet extends HttpServlet {
         req.setAttribute("coordenateX",coordenateX);
         req.setAttribute("coordenateY", coordenateY);
 
+
         if(figureService.ObtainFigure(name,Typefigure,color,size,coordenateX,coordenateY) == null) {
             Figure CreateFigure = figureService.ObtainFigure(name,Typefigure,color,size,coordenateX,coordenateY);
             req.setAttribute("createFigure", CreateFigure);

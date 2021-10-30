@@ -6,6 +6,7 @@ org\practica\Figures_Geometriques\DAOs\FigureDAO.class
 org\practica\Figures_Geometriques\Services\FigureService.class
 org\practica\Figures_Geometriques\Services\LoginService.class
 org\practica\Figures_Geometriques\Filters\AuthFilter.class
+org\practica\Figures_Geometriques\Controllers\ViewFigureController.class
 org\practica\Figures_Geometriques\DAOs\UserDAOImpl.class
 org\practica\Figures_Geometriques\DAOs\FigureDAOImpl.class
 org\practica\Figures_Geometriques\Models\User.class
