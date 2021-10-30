@@ -45,10 +45,10 @@ public class FigureService {
 
         if(verify){
             message = null;
-            session.setAttribute("nombre", name);
-            session.setAttribute("opcionFigura", typeFigure);
-            session.setAttribute("opcionColor", color);
-            session.setAttribute("tamany", size);
+            session.setAttribute("name", name);
+            session.setAttribute("tipo", typeFigure);
+            session.setAttribute("color", color);
+            session.setAttribute("size", size);
             session.setAttribute("coordenadaX",coordenateX);
             session.setAttribute("coordenadaY", coordenateY);
 

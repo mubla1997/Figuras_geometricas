@@ -33,7 +33,7 @@ public class IndiceServlet extends HttpServlet {
 
 
         figureService.verifyFigure(name,typefigure,color,size,coordenateX,coordenateY,req);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/Post.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/Indice.jsp");
         dispatcher.forward(req, resp);
     }
 }

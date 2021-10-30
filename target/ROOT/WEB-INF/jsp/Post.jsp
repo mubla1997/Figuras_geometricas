@@ -21,7 +21,7 @@
     <input type="submit" value="Logout" />
 </form>
     <p> Name: ${name} </p>
-    <p> Type: ${figure} </p>
+    <p> Type: ${tipo} </p>
 
 <canvas id="myCanvas" width="1024" height="768"> </canvas>
 
@@ -29,7 +29,8 @@
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
 
-    switch("${figure}") {
+
+    switch("${tipo}") {
     case "Cercle":
         createCercle(ctx);
         break;
@@ -49,8 +50,8 @@
 
     function createCercle(ctx){
     		if (ctx) {
-    					var x = ${coordenateX};
-    					var y = ${coordenateY};
+    					var x = ${coordenadaX};
+    					var y = ${coordenadaY};
     					var r = ${size} / 2;
     					var aPartida = 0;
                         var aFinal = 2 * Math.PI;
@@ -68,8 +69,8 @@
 
     function createSquare(ctx){
         if(ctx){
-                    var x = ${coordenateX};
-                    var y = ${coordenateY};
+                    var x = ${coordenadaX};
+                    var y = ${coordenadaY};
                     var base = ${size};
                     var alture = ${size};
 
@@ -85,8 +86,8 @@
 
     function createTriangle(ctx){
         if(ctx){
-             var x = ${coordenateX};
-             var y = ${coordenateY};
+             var x = ${coordenadaX};
+             var y = ${coordenadaY};
              var z = ${size};
 
             ctx.beginPath();
@@ -104,8 +105,8 @@
 
     function createPentagon(ctx){
         if(ctx){
-             var x = ${coordenateX};
-             var y = ${coordenateY};
+             var x = ${coordenadaX};
+             var y = ${coordenadaY};
              var size = ${size};
              var sides = 5;
              var penta = 2 * Math.PI / sides; /* Valor precalculado del la funcion pentagono */
@@ -135,8 +136,8 @@
                              y --> Coordenada y tienda del centro estrella.
                 */
 
-                var x = ${coordenateX};
-                var y = ${coordenateY};
+                var x = ${coordenadaX};
+                var y = ${coordenadaY};
                 var R = ${size};
                 var r = ${size}/2;
                 var n = 7;

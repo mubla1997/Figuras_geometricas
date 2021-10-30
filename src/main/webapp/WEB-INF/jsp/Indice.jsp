@@ -30,7 +30,7 @@
                 <option value= "Square"> Square </option>
                 <option value="Triangle"> Triangle  </option>
                 <option value= "Pentagon"> Pentagon </option>
-                <option value="Start"> Star </option>
+                <option value="Star"> Star </option>
             </select>
         </td>
     </td>
