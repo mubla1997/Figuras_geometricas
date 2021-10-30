@@ -61,8 +61,9 @@
 </tr>
 
 </table>
+
 <input type="submit" value="Create" />
-</form>
+
 
 <form action="${pageContext.request.contextPath}/list" method="post">
     <input type="submit" value="View List" />
