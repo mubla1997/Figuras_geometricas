@@ -28,9 +28,9 @@
             <select name = "opcionFigura">
                 <option value= "Cercle"> Cercle </option>
                 <option value= "Square"> Square </option>
-                <option> Triangle  </option>
-                <option> Pentagon </option>
-                <option> Star </option>
+                <option value="Triangle"> Triangle  </option>
+                <option value= "Pentagon"> Pentagon </option>
+                <option value="Start"> Star </option>
             </select>
         </td>
     </td>

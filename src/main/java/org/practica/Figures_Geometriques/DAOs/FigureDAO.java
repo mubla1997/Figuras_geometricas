@@ -6,6 +6,10 @@ import java.util.Date;
 import java.util.List;
 
 public interface FigureDAO {
-    Figure saveFigure(String name, String typeFigure, String color, int size, int coordenateX, int coordenateY);
+    Figure getFigure(String nameFigure, String username_own);
     List<Figure> showFigures();
+    List<Figure> showFiguresUser(String username);
+    void createFigure(Figure figure);
+    void deleteFigure(Figure figure);
+
 }

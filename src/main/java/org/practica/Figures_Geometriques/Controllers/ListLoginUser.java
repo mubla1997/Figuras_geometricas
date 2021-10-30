@@ -24,17 +24,9 @@ public class ListLoginUser extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        if(figureService.ObtainAllFigure() != null){
-            List<Figure> AllFigure = figureService.ObtainAllFigure();
-            System.out.println(AllFigure);
-            req.setAttribute("list",AllFigure);
             RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/ViewListLogin.jsp");
             dispatcher.forward(req,resp);
             return;
-        }
 
-        req.setAttribute("message","Error to mostrate list");
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/ViewListLogin.jsp");
-        dispatcher.forward(req,resp);
     }
 }

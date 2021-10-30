@@ -32,14 +32,6 @@ public class ViewFigureController extends HttpServlet {
         req.setAttribute("coordenateY", coordenateY);
 
 
-        if(figureService.ObtainFigure(name,Typefigure,color,size,coordenateX,coordenateY) == null) {
-            Figure CreateFigure = figureService.ObtainFigure(name,Typefigure,color,size,coordenateX,coordenateY);
-            req.setAttribute("createFigure", CreateFigure);
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/Post.jsp");
-            dispatcher.forward(req, resp);
-            return;
-        }
-        req.setAttribute("message","Error to create figure");
         RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/Post.jsp");
         dispatcher.forward(req, resp);
     }

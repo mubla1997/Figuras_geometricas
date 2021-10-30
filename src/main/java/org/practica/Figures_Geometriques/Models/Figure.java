@@ -7,6 +7,7 @@ public class Figure {
     int size;
     int coordenateX;
     int coordenateY;
+    String username_own;
 
     public String getName() {
         return name;
@@ -54,5 +55,13 @@ public class Figure {
 
     public void setCoordenateY(int coordenateY) {
         this.coordenateY = coordenateY;
+    }
+
+    public String getUsername_own() {
+        return username_own;
+    }
+
+    public void setUsername_own(String username_own) {
+        this.username_own = username_own;
     }
 }
