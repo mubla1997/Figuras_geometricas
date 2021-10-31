@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(value ="/ViewFigure")
+@WebServlet(value ="/priv/ViewFigure")
 public class ViewFigureController extends HttpServlet {
     FigureService figureService = new FigureService();
 
@@ -32,7 +32,7 @@ public class ViewFigureController extends HttpServlet {
         req.setAttribute("coordenateY", coordenateY);
 
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/Post.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/Draw.jsp");
         dispatcher.forward(req, resp);
     }
 }

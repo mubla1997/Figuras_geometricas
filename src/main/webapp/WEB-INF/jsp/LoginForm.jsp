@@ -1,6 +1,7 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<html>
 <head>
 <title>Login</title>
 </head>
@@ -25,6 +26,5 @@
 <form action="${pageContext.request.contextPath}/register" method="get">
     <input type="submit" value="Register" />
 </form>
-
 </body>
 </html>

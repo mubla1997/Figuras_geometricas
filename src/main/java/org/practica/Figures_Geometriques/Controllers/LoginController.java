@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.Writer;
+
 
 @WebServlet(value = "/login")
 public class LoginController extends HttpServlet {
@@ -28,6 +28,7 @@ public class LoginController extends HttpServlet {
 
         String username = req.getParameter("username");
         String password = req.getParameter("password");
+
 
         if(loginService.userOk(username,password)){
             HttpSession session = req.getSession();

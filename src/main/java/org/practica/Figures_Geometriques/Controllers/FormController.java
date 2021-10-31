@@ -12,12 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(value ="/indice")
-public class IndiceServlet extends HttpServlet {
+@WebServlet(value ="/priv/form")
+public class FormController extends HttpServlet {
     FigureService figureService = new FigureService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/Indice.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/Form.jsp");
         dispatcher.forward(req,resp);
     }
 
@@ -33,7 +33,8 @@ public class IndiceServlet extends HttpServlet {
 
 
         figureService.verifyFigure(name,typefigure,color,size,coordenateX,coordenateY,req);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/Indice.jsp");
+
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/Draw.jsp");
         dispatcher.forward(req, resp);
     }
 }

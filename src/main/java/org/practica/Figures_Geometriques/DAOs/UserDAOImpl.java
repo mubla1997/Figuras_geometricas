@@ -72,7 +72,9 @@ public class UserDAOImpl implements UserDAO {
         Connection con = db.getConnection();
 
         try {
-            PreparedStatement preparedStatement = con.prepareStatement("insert into usuari('username','passwd') values (?,?);");
+            PreparedStatement preparedStatement =
+            con.prepareStatement("insert into usuari('username','passwd') values (?,?);");
+            
             preparedStatement.setString(1, user.getUsername());
             preparedStatement.setString(2, user.getPassword());
             preparedStatement.execute();

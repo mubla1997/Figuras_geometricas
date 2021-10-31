@@ -24,8 +24,6 @@ public class RegisterController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
         String username = req.getParameter("username");
         String passwd = req.getParameter("password");
         String repPasswd = req.getParameter("repPass");

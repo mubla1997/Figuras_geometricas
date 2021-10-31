@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(value ="/list")
+@WebServlet(value ="/priv/list")
 public class ListLoginUser extends HttpServlet {
    FigureService figureService = new FigureService();
 

@@ -1,9 +1,9 @@
+org\practica\Figures_Geometriques\Controllers\FormController.class
 org\practica\Figures_Geometriques\DAOs\Database.class
 org\practica\Figures_Geometriques\Controllers\ListLoginUser.class
 org\practica\Figures_Geometriques\Controllers\RegisterController.class
 org\practica\Figures_Geometriques\Controllers\LoginController.class
 org\practica\Figures_Geometriques\Models\Figure.class
-org\practica\Figures_Geometriques\Controllers\IndiceServlet.class
 org\practica\Figures_Geometriques\DAOs\FigureDAO.class
 org\practica\Figures_Geometriques\Services\FigureService.class
 org\practica\Figures_Geometriques\Services\LoginService.class

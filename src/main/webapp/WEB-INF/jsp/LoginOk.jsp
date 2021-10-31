@@ -7,7 +7,7 @@
 </head>
 <body>
 <%
-    response.sendRedirect("/indice");
+    response.sendRedirect("/priv/form");
 %>
 </body>
 </html>

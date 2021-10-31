@@ -14,7 +14,7 @@
 <h1> Indice </h1>
 <h2> Creacion de figuras geometricas <h2>
 
-<form action="/indice" method="post">
+<form action="/priv/form" method="post">
 <table>
 
 <tr>
@@ -62,10 +62,10 @@
 
 </table>
 
-<input type="submit" value="Create" />
+<input type="submit" value="Preview" />
 
 
-<form action="${pageContext.request.contextPath}/list" method="post">
+<form action="${pageContext.request.contextPath}/priv/list" method="post">
     <input type="submit" value="View List" />
 </form>
 

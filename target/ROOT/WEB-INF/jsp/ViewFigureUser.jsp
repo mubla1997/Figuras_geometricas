@@ -13,8 +13,7 @@
 </head>
 <body>
 
-<form action="${pageContext.request.contextPath}/list" method="post">
-
+<form action="${pageContext.request.contextPath}/priv/list" method="post">
     <input type="submit" value="Go Back" />
 </form>
 <form action="${pageContext.request.contextPath}/logout" method="post">

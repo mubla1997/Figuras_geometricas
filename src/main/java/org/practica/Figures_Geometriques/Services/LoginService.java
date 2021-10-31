@@ -14,14 +14,19 @@ public class LoginService {
     public boolean userOk(String username, String password){
         User user = userDAO.getUser(username);
 
-        if (username == null || password == null) return false;
+        if (password == null || username == null) return false;
+        if(!username.matches(".{1,20}")) return false;
+        if(!password.matches(".{1,20}")) return false;
+
         if(user == null) {
             return false;
         }else return user.getPassword().equals(password);
-
     }
 
     public boolean createUserOk(String username, String password) throws SQLException {
+
+            if(!username.matches(".{1,20}")) return false;
+            if(!password.matches(".{1,20}")) return false;
 
             for (User us : userList) {
                 if (us.getUsername().equals(username)) {
