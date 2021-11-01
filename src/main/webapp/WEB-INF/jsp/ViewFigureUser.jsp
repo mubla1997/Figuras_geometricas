@@ -14,7 +14,10 @@
 <body>
 
 <form action="${pageContext.request.contextPath}/priv/list" method="post">
-    <input type="submit" value="Go Back" />
+    <input type="submit" value="Go list" />
+</form>
+<form action="${pageContext.request.contextPath}/priv/viewAllFigures" method="post">
+    <input type="submit" value="Go all list" />
 </form>
 <form action="${pageContext.request.contextPath}/logout" method="post">
     <input type="submit" value="Logout" />

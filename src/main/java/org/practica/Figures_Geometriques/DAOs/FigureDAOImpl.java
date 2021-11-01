@@ -53,18 +53,15 @@ public class FigureDAOImpl implements FigureDAO {
         List<Figure> listFigures = new ArrayList <>();
 
         try{
-            PreparedStatement preparedStatement = con.prepareStatement("select * from figura");
+            PreparedStatement preparedStatement = con.prepareStatement("select nom,tipus,fecha,username_own from figura");
             ResultSet rs = preparedStatement.executeQuery();
 
             while(rs.next()){
                 Figure figure = new Figure();
                 figure.setName(rs.getString(1));
                 figure.setTypeFigure(rs.getString(2));
-                figure.setCoordenateX(rs.getInt(3));
-                figure.setCoordenateY(rs.getInt(4));
-                figure.setSize(rs.getInt(5));
-                figure.setColor(rs.getString(6));
-                figure.setUsername_own(rs.getString(7));
+                figure.setDate(rs.getDate(3));
+                figure.setUsername_own(rs.getString(4));
 
                 listFigures.add(figure);
             }

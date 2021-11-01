@@ -20,6 +20,10 @@
         <input type="submit" value="Create other figure" />
     </form>
 
+      <form action="${pageContext.request.contextPath}/priv/viewAllFigures" method="get">
+            <input type="submit" value="View all figures" />
+      </form>
+
    <c:forEach var = "figure" items="${listFigures}">
 
        <p> Name: ${figure.name}</p>
@@ -31,7 +35,6 @@
        <form action="${pageContext.request.contextPath}/priv/list" method="post">
        <input type="hidden" name= "nom" value= "${figure.name}" />
        <button type= "submit"> Eliminate </button>
-
        </form>
    </c:forEach>
 </body>
