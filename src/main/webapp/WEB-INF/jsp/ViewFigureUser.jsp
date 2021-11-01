@@ -22,8 +22,8 @@
 <form action="${pageContext.request.contextPath}/logout" method="post">
     <input type="submit" value="Logout" />
 </form>
-    <p> Name: ${name} </p>
-    <p> Type: ${figure} </p>
+    <p> Name: ${viewFigure.name} </p>
+    <p> Type: ${viewFigure.typeFigure} </p>
 
 <canvas id="myCanvas" width="1024" height="768"> </canvas>
 
