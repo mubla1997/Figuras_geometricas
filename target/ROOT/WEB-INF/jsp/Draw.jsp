@@ -1,6 +1,10 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -9,20 +13,17 @@
 
     <title>preview</title>
 
-    <link rel="stylesheet" href="">
+    <style> <%@include file="/WEB-INF/css/index.css"%> </style>
 </head>
 <body>
-<h1>Preview figure</h1>
+    <h1 class="text-info"> Preview figure</h1>
 <form action="${pageContext.request.contextPath}/priv/list" method="get" >
-    <input type="submit" value="Save" />
-
+    <input type="submit" class="btn btn-info btn-md" value="Save" />
 </form>
+    <a href="${pageContext.request.contextPath}/logout" class="text-info"> logout</a>
 
-<form action="${pageContext.request.contextPath}/logout" method="post">
-    <input type="submit" value="Logout" />
-</form>
-    <p> Name: ${name} </p>
-    <p> Type: ${tipo} </p>
+    <br><h4> Name: ${name} </h4>
+    <h4> Type: ${tipo} </h4>
 
 <canvas id="myCanvas" width="1024" height="768"> </canvas>
 
