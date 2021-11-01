@@ -13,7 +13,7 @@
 <body>
 
 <c:if test="${not empty 'message'}">
-<div> ${message}</div>
+<h4><div> ${message}</div></h4>
 </c:if>
        <div id="register">
             <div class="container">
@@ -28,11 +28,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="text-info">Password</label>
-                                    <input type="text" class="form-control" id="password" name="password" placeholder="Enter password">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
                                 </div>
                                 <div class="form-group">
                                     <label for="passwordR" class="text-info">Password</label>
-                                    <input type="text" class="form-control" id="passwordR" name="repPass" placeholder="Repit password">
+                                    <input type="password" class="form-control" id="passwordR" name="repPass" placeholder="Repit password">
                                 </div>
                                 <input type="submit" name="submit" class="btn btn-info btn-md" value="Register">
 
