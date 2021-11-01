@@ -1,0 +1,20 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #252323;
+}
+#form .container #form-row #form-column #form-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 670px;
+  border: 1px solid #9C9C9C;
+  background-color: #000000;
+}
+#form .container #form-row #form-column #form-box #form-form {
+  padding: 20px;
+}
+
+h4{
+    color: #FF0000;
+}

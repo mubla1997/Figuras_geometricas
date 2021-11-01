@@ -1,0 +1,19 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #252323;
+}
+
+h1{
+background-color: #000000;
+padding: 20px;
+}
+#myCanvas{
+ background-color: #FFFFFF;
+}
+h4{
+    color: #FFFFFF;
+}
+.container{
+background-color: #FFFFFF;
+}
