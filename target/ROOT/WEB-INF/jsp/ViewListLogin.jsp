@@ -13,14 +13,22 @@
 
    <h1>Lista de figuras</h1>
 
-   <c:forEach var = "figure" items="${list}">
+    <form action="${pageContext.request.contextPath}/logout" method="post">
+        <input type="submit" value="Logout" />
+    </form>
+    <form action="${pageContext.request.contextPath}/priv/form" method="get">
+        <input type="submit" value="Create other figure" />
+    </form>
+
+   <c:forEach var = "figure" items="${listFigures}">
+
        <p> Name: ${figure.name}</p>
        <p> Type: ${figure.typeFigure}</p>
+       <p> Creation Date: ${figure.date} </p>
 
-       <form action="${pageContext.request.contextPath}/indice" method="post">
-           <input type="submit" value="Visualizar" />
+
+
        </form>
-
    </c:forEach>
 </body>
 </html>

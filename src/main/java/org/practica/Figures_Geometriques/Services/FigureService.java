@@ -4,9 +4,10 @@ import org.practica.Figures_Geometriques.DAOs.FigureDAO;
 import org.practica.Figures_Geometriques.DAOs.FigureDAOImpl;
 import org.practica.Figures_Geometriques.Models.Figure;
 
-import javax.servlet.http.HttpServlet;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+
 import java.util.Date;
 import java.util.List;
 
@@ -59,6 +60,7 @@ public class FigureService {
             figure.setSize(size);
             figure.setCoordenateX(coordenateX);
             figure.setCoordenateY(coordenateY);
+            figure.setDate(new Date());
             figure.setUsername_own((String) session.getAttribute("username"));
             figureDAO.createFigure(figure);
         }

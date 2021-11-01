@@ -13,10 +13,11 @@
 </head>
 <body>
 
-<form action="${pageContext.request.contextPath}/priv/list" method="post">
+<form action="${pageContext.request.contextPath}/priv/list" method="get" >
+    <input type="submit" value="Save" />
 
-    <input type="submit" value="View List" />
 </form>
+
 <form action="${pageContext.request.contextPath}/logout" method="post">
     <input type="submit" value="Logout" />
 </form>
@@ -28,7 +29,6 @@
     <script>
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
-
 
     switch("${tipo}") {
     case "Cercle":
@@ -127,14 +127,14 @@
 
     function createStar(ctx) {
         if(ctx){
-                /*
-                             Ctx --> objeto de dibujo de contenido.
-                             n --> número de vértices de estrella.
-                             r --> radio interior.
-                             R --> Radio exterior.
-                             x --> punto central de la estrella x coordenada.
-                             y --> Coordenada y tienda del centro estrella.
-                */
+            /*
+                 Ctx --> objeto de dibujo de contenido.
+                 n --> número de vértices de estrella.
+                 r --> radio interior.
+                 R --> Radio exterior.
+                 x --> punto central de la estrella x coordenada.
+                 y --> Coordenada y tienda del centro estrella.
+            */
 
                 var x = ${coordenadaX};
                 var y = ${coordenadaY};

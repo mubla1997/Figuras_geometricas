@@ -1,5 +1,7 @@
 package org.practica.Figures_Geometriques.Models;
 
+import java.util.Date;
+
 public class Figure {
     String name;
     String typeFigure;
@@ -8,6 +10,7 @@ public class Figure {
     int coordenateX;
     int coordenateY;
     String username_own;
+    Date date;
 
     public String getName() {
         return name;
@@ -63,5 +66,13 @@ public class Figure {
 
     public void setUsername_own(String username_own) {
         this.username_own = username_own;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

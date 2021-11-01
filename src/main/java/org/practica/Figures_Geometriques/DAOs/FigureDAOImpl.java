@@ -3,10 +3,10 @@ package org.practica.Figures_Geometriques.DAOs;
 import org.practica.Figures_Geometriques.Models.Figure;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class FigureDAOImpl implements FigureDAO {
@@ -19,6 +19,7 @@ public class FigureDAOImpl implements FigureDAO {
 
         try{
             PreparedStatement preparedStatement = con.prepareStatement("select * from figura where name=? and username_own=?;");
+
             preparedStatement.setString(1,nameFigure);
             preparedStatement.setString(2,username_own);
             ResultSet rs = preparedStatement.executeQuery();
@@ -83,7 +84,7 @@ public class FigureDAOImpl implements FigureDAO {
         List<Figure> listFiguresUser = new ArrayList <>();
 
         try{
-            PreparedStatement preparedStatement = con.prepareStatement("select * from figura where username_own=?;");
+            PreparedStatement preparedStatement = con.prepareStatement("select nom,tipus,fecha,username_own from figura where username_own=?;");
             preparedStatement.setString(1,username);
             ResultSet rs = preparedStatement.executeQuery();
 
@@ -91,11 +92,8 @@ public class FigureDAOImpl implements FigureDAO {
                 Figure figure = new Figure();
                 figure.setName(rs.getString(1));
                 figure.setTypeFigure(rs.getString(2));
-                figure.setCoordenateY(rs.getInt(3));
-                figure.setCoordenateY(rs.getInt(4));
-                figure.setSize(rs.getInt(5));
-                figure.setColor(rs.getString(6));
-                figure.setUsername_own(rs.getString(7));
+                figure.setDate(rs.getDate(3));
+                figure.setUsername_own(rs.getString(4));
 
                 listFiguresUser.add(figure);
             }
@@ -115,14 +113,17 @@ public class FigureDAOImpl implements FigureDAO {
         Connection con = db.getConnection();
 
         try{
-            PreparedStatement preparedStatement = con.prepareStatement("insert into figura values(?,?,?,?,?,?,?");
+            PreparedStatement preparedStatement =
+            con.prepareStatement("insert into figura(nom,tipus,coordenadaX,coordenadaY,grandaria,color,fecha,username_own) values (?,?,?,?,?,?,?,?);");
             preparedStatement.setString(1,figure.getName());
             preparedStatement.setString(2,figure.getTypeFigure());
             preparedStatement.setInt(3,figure.getCoordenateX());
             preparedStatement.setInt(4,figure.getCoordenateY());
             preparedStatement.setInt(5,figure.getSize());
             preparedStatement.setString(6,figure.getColor());
-            preparedStatement.setString(7,figure.getUsername_own());
+            preparedStatement.setDate(7,new Date(figure.getDate().getTime()));;
+            preparedStatement.setString(8,figure.getUsername_own());
+
 
             preparedStatement.execute();
             preparedStatement.close();
@@ -137,7 +138,7 @@ public class FigureDAOImpl implements FigureDAO {
         Connection con = db.getConnection();
 
         try{
-            PreparedStatement preparedStatement = con.prepareStatement("delete from figura where nom=? and username_own=?;");
+            PreparedStatement preparedStatement = con.prepareStatement("delete from figura where nom= ? and username_own=?;");
             preparedStatement.setString(1,figure.getName());
             preparedStatement.setString(2,figure.getUsername_own());
             preparedStatement.execute();

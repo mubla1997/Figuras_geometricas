@@ -63,9 +63,9 @@
 </table>
 
 <input type="submit" value="Preview" />
+</form>
 
-
-<form action="${pageContext.request.contextPath}/priv/list" method="post">
+<form action="${pageContext.request.contextPath}/priv/list" method="get">
     <input type="submit" value="View List" />
 </form>
 
