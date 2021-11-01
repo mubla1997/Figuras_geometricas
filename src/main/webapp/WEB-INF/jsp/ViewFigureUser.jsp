@@ -113,7 +113,7 @@
             if(ctx){
                  var x = coordX;
                  var y = coordY;
-                 var size = size;
+                 var sizeP = size;
                  var sides = 5;
                  var penta = 2 * Math.PI / sides; /* Valor precalculado del la funcion pentagono */
                  var fix = (Math.PI / 180.0) * -18; /* Fijamos el pentagono */
@@ -122,7 +122,7 @@
 
                 for (var i = 1; i <= sides;i += 1) {
                 var cursor = i * penta + fix;
-                  ctx.lineTo (x + size * Math.cos(cursor), y + size * Math.sin(cursor));
+                  ctx.lineTo (x + sizeP * Math.cos(cursor), y + sizeP * Math.sin(cursor));
                 }
                 ctx.closePath();
                 ctx.fillStyle = color;
