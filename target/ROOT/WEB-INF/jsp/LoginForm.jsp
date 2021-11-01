@@ -6,7 +6,7 @@
 <title>Login</title>
 </head>
 <body>
-<h1> Login de usuario </h1>
+<h1> Login </h1>
 
 <c:if test="${not empty 'message'}">
 <div> ${message}</div>

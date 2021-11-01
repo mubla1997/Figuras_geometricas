@@ -11,7 +11,7 @@
     <div> ${message}</div>
     </c:if>
 
-   <h1>Lista de figuras</h1>
+   <h1>List your figures</h1>
 
     <form action="${pageContext.request.contextPath}/logout" method="post">
         <input type="submit" value="Logout" />

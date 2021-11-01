@@ -3,7 +3,7 @@
 
 <html>
 <head>
-<title>List</title>
+<title>List all figure</title>
 </head>
 <body>
 
@@ -11,7 +11,7 @@
     <div> ${message}</div>
     </c:if>
 
-   <h1>Lista de figuras</h1>
+   <h1>List all figures</h1>
 
     <form action="${pageContext.request.contextPath}/logout" method="post">
         <input type="submit" value="Logout" />

@@ -3,7 +3,7 @@
 
 <html>
 <head>
-<title>Indice</title>
+<title>Create your figure</title>
 </head>
 <body>
 
@@ -11,8 +11,7 @@
 <div> ${message}</div>
 </c:if>
 
-<h1> Indice </h1>
-<h2> Creacion de figuras geometricas <h2>
+<h1> Create your figure </h1>
 
 <form action="/priv/form" method="post">
 <table>
