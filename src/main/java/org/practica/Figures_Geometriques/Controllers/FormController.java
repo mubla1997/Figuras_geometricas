@@ -1,6 +1,5 @@
 package org.practica.Figures_Geometriques.Controllers;
 
-import org.practica.Figures_Geometriques.Models.Figure;
 import org.practica.Figures_Geometriques.Services.FigureService;
 
 import javax.servlet.RequestDispatcher;

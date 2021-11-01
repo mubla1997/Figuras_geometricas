@@ -26,7 +26,11 @@
        <p> Type: ${figure.typeFigure}</p>
        <p> Creation Date: ${figure.date} </p>
 
+       <td><a href="viewFigure?name=${figure.name}&user_own=${figure.username_own}">View</a></td>
 
+       <form action="${pageContext.request.contextPath}/priv/list" method="post">
+       <input type="hidden" name= "nom" value= "${figure.name}" />
+       <button type= "submit"> Eliminate </button>
 
        </form>
    </c:forEach>

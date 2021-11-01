@@ -18,7 +18,8 @@ public class FigureDAOImpl implements FigureDAO {
         Connection con = db.getConnection();
 
         try{
-            PreparedStatement preparedStatement = con.prepareStatement("select * from figura where name=? and username_own=?;");
+            PreparedStatement preparedStatement =
+            con.prepareStatement("select nom,tipus,coordenadaX,coordenadaY,grandaria,color,username_own from figura where nom=? and username_own=?;");
 
             preparedStatement.setString(1,nameFigure);
             preparedStatement.setString(2,username_own);
@@ -28,7 +29,7 @@ public class FigureDAOImpl implements FigureDAO {
                 Figure figure = new Figure();
                 figure.setName(rs.getString(1));
                 figure.setTypeFigure(rs.getString(2));
-                figure.setCoordenateY(rs.getInt(3));
+                figure.setCoordenateX(rs.getInt(3));
                 figure.setCoordenateY(rs.getInt(4));
                 figure.setSize(rs.getInt(5));
                 figure.setColor(rs.getString(6));
@@ -59,7 +60,7 @@ public class FigureDAOImpl implements FigureDAO {
                 Figure figure = new Figure();
                 figure.setName(rs.getString(1));
                 figure.setTypeFigure(rs.getString(2));
-                figure.setCoordenateY(rs.getInt(3));
+                figure.setCoordenateX(rs.getInt(3));
                 figure.setCoordenateY(rs.getInt(4));
                 figure.setSize(rs.getInt(5));
                 figure.setColor(rs.getString(6));
@@ -121,7 +122,7 @@ public class FigureDAOImpl implements FigureDAO {
             preparedStatement.setInt(4,figure.getCoordenateY());
             preparedStatement.setInt(5,figure.getSize());
             preparedStatement.setString(6,figure.getColor());
-            preparedStatement.setDate(7,new Date(figure.getDate().getTime()));;
+            preparedStatement.setDate(7,new Date(figure.getDate().getTime()));
             preparedStatement.setString(8,figure.getUsername_own());
 
 

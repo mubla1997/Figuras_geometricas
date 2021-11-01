@@ -3,7 +3,6 @@ package org.practica.Figures_Geometriques.Controllers;
 import org.practica.Figures_Geometriques.DAOs.FigureDAO;
 import org.practica.Figures_Geometriques.DAOs.FigureDAOImpl;
 import org.practica.Figures_Geometriques.Models.Figure;
-import org.practica.Figures_Geometriques.Services.FigureService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

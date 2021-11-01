@@ -18,7 +18,7 @@ public class FigureService {
     public void verifyFigure(String name, String typeFigure, String color, int size, int coordenateX, int coordenateY, HttpServletRequest req){
         HttpSession session = req.getSession();
         List<Figure> listFigures = figureDAO.showFiguresUser((String) session.getAttribute("usermame"));
-        String message ="";
+        String message;
         boolean verify = true;
 
         if(coordenateX < 0  || coordenateX >= 1024){
@@ -45,7 +45,6 @@ public class FigureService {
         }
 
         if(verify){
-            message = null;
             session.setAttribute("name", name);
             session.setAttribute("tipo", typeFigure);
             session.setAttribute("color", color);

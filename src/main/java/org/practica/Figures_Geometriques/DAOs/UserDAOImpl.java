@@ -78,6 +78,8 @@ public class UserDAOImpl implements UserDAO {
             preparedStatement.setString(1, user.getUsername());
             preparedStatement.setString(2, user.getPassword());
             preparedStatement.execute();
+            preparedStatement.close();
+            con.close();
 
         }catch (Exception e){
             e.printStackTrace();
